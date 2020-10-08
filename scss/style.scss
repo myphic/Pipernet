@@ -6,6 +6,9 @@ font-family: 'Lato', sans-serif;
 @mixin font-montserrat{
 font-family: 'Montserrat', sans-serif;
 }
+@mixin font-roboto{
+    font-family: 'Roboto', sans-serif;
+    }
 // /Mixins
 
 // Variables
@@ -19,10 +22,17 @@ html, body {
     height: 100%;
 }
 body {
-    @include font-lato;
+    @include font-roboto;
 }
-.section-header--first {
+.section-inner {
+    width: 1100px;
+    margin: 0 auto;
+}
+.section-header-first {
     background-color: #007765;
+}
+h3,h5, p {
+    margin: 0;
 }
 .menu {
     display: flex;
@@ -55,7 +65,7 @@ body {
     }
 }
 
-.section-header--second {
+.section-header-second {
     background: url("../img/header-background_img.png") no-repeat 50% 50%;
     background-size: cover;
 }
@@ -72,4 +82,102 @@ body {
         line-height: 84px;
         margin: 0;
     }
+}
+.problem-header, .headSt {
+    margin-top: 48px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #007765;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 75px;
+}
+
+.problem-content {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 37px;
+    margin-bottom: 90px;
+    &--bold {
+        font-weight: 700;
+    }
+}
+.section-slogan {
+    background: url("../img/section-slogan.png") no-repeat 50% 50%;
+    background-size: cover;
+}
+.slogan-text {
+    text-align: center;
+    padding-top: 128px;
+    padding-bottom: 128px;
+    color: white;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 48px;
+    line-height: 56.5px;
+    width: 894px;
+    margin: 0 auto;
+}
+.intro-imgtext {
+    display: flex;
+    &--img {
+        margin-right: 48px;
+    }
+    &--text {
+        font-weight: 400;
+        font-style: italic;
+        font-size: 32px;
+        line-height: 37.5px;
+    }
+    margin-bottom: 35px;
+}
+.intro-maintext {
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+    padding-bottom: 92px;
+}
+.section-team {
+    background-color: #EEEEEE;
+    &__head {
+        padding-top: 58px;
+        padding-bottom: 56px;
+    }
+}
+.team-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    padding-bottom: 20px;
+    &__item {
+        flex-basis: 33.3333%;
+        text-align: center;
+        padding-bottom: 82px;
+        &-name {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 28px;
+            color: #007765;
+        }
+        &-role {
+            font-size: 18px;
+            line-height: 21px;
+            font-style: italic;
+        }
+    }
+}
+.section-footer {
+    background-color: #333333;
+}
+.footer-copyright {
+    text-align: center;
+    width: 540px;
+    margin: 0 auto;
+    color: white;
+    font-size: 18px;
+    line-height: 21px;
+    padding-top: 50px;
+    padding-bottom: 62px;
 }
